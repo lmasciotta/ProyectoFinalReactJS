@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "modelo": "S23Ultra",
+      "color": "Negro",
+      "precio": "490000$",
+      "detalle": "Nuevo sin detalles"
+    },
+    {
+      "id": 2,
+      "modelo": "Iphone14promax",
+      "color": "Negro",
+      "precio": "790000$",
+      "detalle": "Nuevo sin detalles"
+    },
+    {
+      "id": 3,
+      "modelo": "GooglePixel7Pro",
+      "color": "Negro",
+      "precio": "590000$",
+      "detalle": "Nuevo sin detalles"
+    }
+  ]
+  
