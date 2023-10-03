@@ -1,7 +1,0 @@
-
-.Contenedor{
-    display: flex; /* Establece el contenedor como un contenedor flexible */
-  flex-direction: row; /* Muestra los elementos en una fila en lugar de una columna */
-  justify-content: space-between; /* Espacia los elementos de manera uniforme en la fila */
-  align-items: center; /* Centra verticalmente los elementos en la fila (opcional) */
-}

@@ -1,5 +1,21 @@
-.Card{
-    width: 25%;
-    height: 100%;
+.Card {
+    width: 100%; 
+    min-height: 400px; 
     border: solid gray;
+    background-color: white;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 1rem;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    padding: 1rem;
+}
+
+
+.imagen {
+    width: 230px;
+    height: 265px;
+    padding: 2px;
 }

@@ -1,0 +1,30 @@
+.Contenedor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+  justify-content: center; 
+}
+
+.Cards {
+  width: 100%; 
+  max-width: 300px; 
+}
+
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px; 
+}
+
+
+.loading-alert {
+  background-color: #007bff; 
+  color: white; 
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  font-size: 18px;
+  font-weight: bold;
+}

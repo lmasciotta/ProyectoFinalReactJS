@@ -1,19 +1,34 @@
 import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import CardsList from './components/CardsList/CardsList';
 import Footer from './components/Footer/Footer';
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import Tablets from './components/Tablets/Tablets';
+import Smartphones from './components/Smartphones/Smartphones';
+import Notebooks from './components/Notebooks/Notebooks';
+import Details from './components/Details/Details';
 
 function App() {
-    const bodyStyle = {
-    background: 'rgb(36,28,0) linear-gradient(90deg, rgba(36,28,0,1) 0%, rgba(245,199,32,1) 0%, rgba(168,168,165,1) 0%, rgba(196,196,196,1) 34%, rgba(156,154,147,1) 69%, rgba(218,218,216,1) 100%)',
-    }
+  const bodyStyle = {
+    background: '#333'
+  };
+
   return (
     <div className="App" style={bodyStyle}>
-      <NavBar/>
-      {<hr/>}
-      <CardsList />
-      <Footer />
+      <BrowserRouter>
+        <div className="content-container">
+        <NavBar />
+        <h1>BIENVENIDO AL MEJOR MARKET DE TECNOLOGÍA</h1>
+        <Routes>
+          <Route path="/smartphones" element={<Smartphones/>} />
+          <Route path="/tablets" element={<Tablets/>} />
+          <Route path="/notebooks" element={<Notebooks/>} />
+          <Route path="/components/Details/:id" element={<Details/>} />
+        </Routes>
+        <hr />
+        <Footer />
+        </div>
+      </BrowserRouter>
     </div>
   );
 }
