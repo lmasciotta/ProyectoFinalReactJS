@@ -4,16 +4,15 @@ import './style.css';
 import Productos from '../Data/Productos.js';
 
 const Tablets = ({ greeting }) => {
-  const [productosTablets, setProductosTablets] = useState([]); // Cambia el nombre de la variable de estado
+  const [productosTablets, setProductosTablets] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         await new Promise((resolve) => setTimeout(resolve, 3000));
-        // Filtra los productos para obtener solo las tablets
-        const tablets = Productos.tablets; // Accede a 'Productos.tablets'
-        setProductosTablets(tablets); // Cambia el nombre de la variable de estado
+        const tablets = Productos.tablets;
+        setProductosTablets(tablets);
         setIsLoading(false);
       } catch (error) {
         console.error('Error al cargar datos', error);
@@ -40,6 +39,7 @@ const Tablets = ({ greeting }) => {
               precio={op.precio}
               detalle={op.detalle}
               id={op.id}
+              categoria="tablets"
             />
           ))}
         </div>

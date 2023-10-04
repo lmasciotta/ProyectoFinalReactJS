@@ -9,12 +9,10 @@ import Notebooks from './components/Notebooks/Notebooks';
 import Details from './components/Details/Details';
 
 function App() {
-  const bodyStyle = {
-    background: '#333'
-  };
+  
 
   return (
-    <div className="App" style={bodyStyle}>
+    <div className="App">
       <BrowserRouter>
         <div className="content-container">
         <NavBar />
@@ -23,7 +21,7 @@ function App() {
           <Route path="/smartphones" element={<Smartphones/>} />
           <Route path="/tablets" element={<Tablets/>} />
           <Route path="/notebooks" element={<Notebooks/>} />
-          <Route path="/components/Details/:id" element={<Details/>} />
+          <Route path="/:categoria/Details/:id" element={<Details />} />
         </Routes>
         <hr />
         <Footer />

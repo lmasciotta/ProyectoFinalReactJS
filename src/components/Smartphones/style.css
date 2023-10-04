@@ -20,7 +20,7 @@
 
 
 .loading-alert {
-  background-color: #007bff; 
+  background-color: #7bff; 
   color: white; 
   padding: 10px 20px; 
   border-radius: 5px; 
@@ -28,3 +28,5 @@
   font-size: 18px;
   font-weight: bold;
 }
+
+

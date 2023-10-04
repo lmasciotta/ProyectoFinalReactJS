@@ -1,19 +1,20 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import Productos from '../Data/Productos';
+import "./style.css";
+
 export default function Details() {
   const { id } = useParams();
+  const categoria = useParams().categoria;
 
   let productoEncontrado = null;
 
-  for (const categoria in Productos) {
-    const productosCategoria = Productos[categoria];
-    const producto = productosCategoria.find((p) => p.id === parseInt(id, 10));
-
-    if (producto) {
-      productoEncontrado = producto;
-      break;
-    }
+  if (categoria === 'telefonos' && Productos.telefonos) {
+    productoEncontrado = Productos.telefonos.find((p) => p.id === parseInt(id, 10));
+  } else if (categoria === 'notebooks' && Productos.notebooks) {
+    productoEncontrado = Productos.notebooks.find((p) => p.id === parseInt(id, 10));
+  } else if (categoria === 'tablets' && Productos.tablets) {
+    productoEncontrado = Productos.tablets.find((p) => p.id === parseInt(id, 10));
   }
 
   if (!productoEncontrado) {
@@ -21,13 +22,15 @@ export default function Details() {
   }
 
   const { modelo, color, precio, detalle } = productoEncontrado;
+  const imagenProducto = require(`../../assets/${modelo}.jpg`);
 
   return (
-    <div>
+    <div className='details'>
       <h2>{modelo}</h2>
+      <img src={imagenProducto} alt={modelo} />
       <p>Color: {color}</p>
       <p>Precio: {precio}</p>
-      <p>Detalle: {detalle}</p>
+      <p>{detalle}</p>
     </div>
   );
 }

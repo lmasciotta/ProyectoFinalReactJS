@@ -4,8 +4,7 @@ import CardsCount from '../CardsCount/CardsCount';
 import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
 
-
-export default function Cards({ modelo, color, precio, detalle, id }) {
+export default function Cards({ modelo, color, precio, detalle, id, categoria }) {
   const imagenProducto = require(`../../assets/${modelo}.jpg`);
 
   const handleAddToCart = (cantidad) => {
@@ -17,20 +16,18 @@ export default function Cards({ modelo, color, precio, detalle, id }) {
       confirmButtonText: 'Aceptar',
     });
   };
-  
 
   return (
-    
     <div className='Card card'> 
       <img src={imagenProducto} className="imagen card-img-top" alt={modelo} /> 
       <div className="card-body">
         <h2 className="card-title">{modelo}</h2> 
         <p className="card-text">{color}</p> 
         <p className="card-text">{precio}</p>
-        <p className="card-text">{detalle}</p>
-        <Link to={`/components/Details/${id}`}>Ver Detalle</Link>
+        <Link to={`/${categoria}/Details/${id}`}>Ver Detalle</Link>
         <CardsCount inicial={1} stock={10} onAdd={handleAddToCart} />
       </div>
     </div>
   );
 }
+

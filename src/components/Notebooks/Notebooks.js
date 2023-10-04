@@ -4,14 +4,14 @@ import Productos from '../Data/Productos.js';
 import './style.css';
 
 const Notebooks = ({ greeting }) => {
-const [productos, setProductos] = useState([]);
-const [isLoading, setIsLoading] = useState(true);
+  const [productos, setProductos] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-useEffect(() => {
+  useEffect(() => {
     const fetchData = async () => {
       try {
         await new Promise((resolve) => setTimeout(resolve, 3000));
-        const notebooks = Productos.notebooks; 
+        const notebooks = Productos.notebooks;
         setProductos(notebooks);
         setIsLoading(false);
       } catch (error) {
@@ -39,6 +39,7 @@ useEffect(() => {
               precio={op.precio}
               detalle={op.detalle}
               id={op.id}
+              categoria="notebooks" 
             />
           ))}
         </div>
