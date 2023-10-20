@@ -1,36 +1,78 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import Productos from '../Data/Productos';
-import "./style.css";
+import React, { useContext, useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import './style.css';
+import Swal from 'sweetalert2'; 
+import { CartContext } from '../Context/CartContext';
+import CardsCount from '../CardsCount/CardsCount';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../Firebase/config.js';
 
 export default function Details() {
-  const { id } = useParams();
-  const categoria = useParams().categoria;
+  const { id, categoria } = useParams();
+  const navigate = useNavigate();
+  const [productoEncontrado, setProductoEncontrado] = useState(null);
+  const { carrito, setCarrito } = useContext(CartContext);
 
-  let productoEncontrado = null;
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const docRef = doc(db, "Productos", id);
+        const resp = await getDoc(docRef);
+        if (resp.exists()) {
+          setProductoEncontrado({ ...resp.data(), id: resp.id });
+        } else {
+          setProductoEncontrado(null);
+        }
+      } catch (error) {
+        console.error("Error al obtener el producto:", error);
+        setProductoEncontrado(null);
+      }
+    };
 
-  if (categoria === 'telefonos' && Productos.telefonos) {
-    productoEncontrado = Productos.telefonos.find((p) => p.id === parseInt(id, 10));
-  } else if (categoria === 'notebooks' && Productos.notebooks) {
-    productoEncontrado = Productos.notebooks.find((p) => p.id === parseInt(id, 10));
-  } else if (categoria === 'tablets' && Productos.tablets) {
-    productoEncontrado = Productos.tablets.find((p) => p.id === parseInt(id, 10));
-  }
+    fetchData();
+  }, [id, categoria]);
+
+  const handleAddToCart = (cantidad) => {
+    if (!productoEncontrado) {
+      return;
+    }
+    const itemAgregado = { ...productoEncontrado, cantidad };
+    const nuevoCarrito = [...carrito];
+
+    const productoExistente = nuevoCarrito.find((producto) => producto.id === itemAgregado.id);
+
+    if (productoExistente) {
+      productoExistente.cantidad += cantidad;
+    } else {
+      nuevoCarrito.push(itemAgregado);
+    }
+    setCarrito(nuevoCarrito);
+
+
+    Swal.fire({
+      icon: 'success',
+      title: 'Producto agregado al carrito',
+      showConfirmButton: false,
+      timer: 1500, 
+    });
+  };
+
+  const handleCancel = () => {
+    navigate(`/${categoria}`);
+  };
 
   if (!productoEncontrado) {
     return <div>Producto no encontrado</div>;
   }
 
-  const { modelo, color, precio, detalle } = productoEncontrado;
-  const imagenProducto = require(`../../assets/${modelo}.jpg`);
-
   return (
     <div className='details'>
-      <h2>{modelo}</h2>
-      <img src={imagenProducto} alt={modelo} />
-      <p>Color: {color}</p>
-      <p>Precio: {precio}</p>
-      <p>{detalle}</p>
+      <h2>{productoEncontrado.modelo}</h2>
+      <img src={productoEncontrado.imagen} alt={productoEncontrado.modelo} />
+      <p>Color: {productoEncontrado.color}</p>
+      <p>Precio: {productoEncontrado.precio}</p>
+      <p>{productoEncontrado.detalle}</p>
+      <CardsCount inicial={1} stock={10} onAdd={handleAddToCart} onCancel={handleCancel} />
     </div>
   );
 }

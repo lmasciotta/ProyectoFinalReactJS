@@ -26,7 +26,7 @@ const Productos = {
       "modelo": "S23Ultra",
       "imagen": S23Ultra,
       "color": "Negro",
-      "precio": "690000$",
+      "precio": 690000,
       "detalle": "Nuevo sin detalles, un mes de uso, se entrega completo con cargador.\nEspecificaciones técnicas:\n- Pantalla: 6.7 pulgadas Super AMOLED\n- Procesador: Exynos 990\n- RAM: 8 GB\n- Almacenamiento: 128 GB\n- Cámara principal: 108 MP\n- Batería: 4500 mAh"
     },
     {
@@ -34,7 +34,7 @@ const Productos = {
       "modelo": "Iphone14ProMax",
       "imagen": Iphone14,
       "color": "Crema",
-      "precio": "890000$",
+      "precio": 890000,
       "detalle": "Nuevo sin detalles, un mes de uso, se entrega completo con cargador.\nEspecificaciones técnicas:\n- Pantalla: 6.7 pulgadas Super Retina XDR\n- Procesador: Apple A16 Bionic\n- RAM: 8 GB\n- Almacenamiento: 256 GB\n- Cámara principal: 12 MP\n- Batería: 4000 mAh"
     },
     {
@@ -42,7 +42,7 @@ const Productos = {
       "modelo": "GooglePixel7Pro",
       "imagen": GooglePixel,
       "color": "Negro",
-      "precio": "790000$",
+      "precio": 790000,
       "detalle": "Nuevo sin detalles, un mes de uso, se entrega completo con cargador.\nEspecificaciones técnicas:\n- Pantalla: 6.3 pulgadas OLED\n- Procesador: Snapdragon 888\n- RAM: 6 GB\n- Almacenamiento: 128 GB\n- Cámara principal: 50 MP\n- Batería: 4000 mAh"
     },
     {
@@ -50,7 +50,7 @@ const Productos = {
       "modelo": "XiaomiNote12Pro",
       "imagen": XiaomiNote12Pro,
       "color": "Negro",
-      "precio": "390000$",
+      "precio": 390000,
       "detalle": "Nuevo sin detalles, un mes de uso, se entrega completo con cargador.\nEspecificaciones técnicas:\n- Pantalla: 6.5 pulgadas AMOLED\n- Procesador: Snapdragon 870\n- RAM: 8 GB\n- Almacenamiento: 128 GB\n- Cámara principal: 108 MP\n- Batería: 4500 mAh"
     },
     {
@@ -58,7 +58,7 @@ const Productos = {
       "modelo": "MotorolaRazr40Ultra",
       "imagen": MotorolaRazr40Ultra,
       "color": "Negro",
-      "precio": "690000$",
+      "precio": 690000,
       "detalle": "Nuevo sin detalles, un mes de uso, se entrega completo con cargador.\nEspecificaciones técnicas:\n- Pantalla: 6.4 pulgadas OLED\n- Procesador: Snapdragon 888\n- RAM: 12 GB\n- Almacenamiento: 256 GB\n- Cámara principal: 50 MP\n- Batería: 4000 mAh"
     },
     {
@@ -66,7 +66,7 @@ const Productos = {
       "modelo": "HuaweiP60Pro",
       "imagen": HuaweiP60Pro,
       "color": "Negro",
-      "precio": "290000$",
+      "precio": 290000,
       "detalle": "Nuevo sin detalles, un mes de uso, se entrega completo con cargador.\nEspecificaciones técnicas:\n- Pantalla: 6.2 pulgadas OLED\n- Procesador: Kirin 990\n- RAM: 8 GB\n- Almacenamiento: 128 GB\n- Cámara principal: 40 MP\n- Batería: 3800 mAh"
     },
   ],
@@ -76,7 +76,7 @@ const Productos = {
       "modelo": "MacBookAir",
       "imagen": MacBookAir,
       "color": "Gris",
-      "precio": "1200000$",
+      "precio": 1200000,
       "detalle": "Nuevo sin detalles, incluye cargador y funda.\nEspecificaciones técnicas:\n- Pantalla: 13.3 pulgadas Retina\n- Procesador: Intel Core i5\n- RAM: 8 GB\n- Almacenamiento: 256 GB SSD"
     },
     {
@@ -84,7 +84,7 @@ const Productos = {
       "modelo": "DellXPS15",
       "imagen": DellXPS15,
       "color": "Plateado",
-      "precio": "1500000$",
+      "precio": 1500000,
       "detalle": "Nuevo sin detalles, incluye cargador y maletín.\nEspecificaciones técnicas:\n- Pantalla: 15.6 pulgadas 4K Ultra HD\n- Procesador: Intel Core i7\n- RAM: 16 GB\n- Almacenamiento: 512 GB SSD"
     },
     {
@@ -92,7 +92,7 @@ const Productos = {
       "modelo": "AsusZenBookPro",
       "imagen": AsusZenBookPro,
       "color": "Azul",
-      "precio": "1350000$",
+      "precio": 1350000,
       "detalle": "Nuevo sin detalles, incluye cargador y funda.\nEspecificaciones técnicas:\n- Pantalla: 14 pulgadas Full HD\n- Procesador: AMD Ryzen 7\n- RAM: 16 GB\n- Almacenamiento: 512 GB SSD"
     },
     {
@@ -100,7 +100,7 @@ const Productos = {
       "modelo": "HPEnvy",
       "imagen": HPEnvy,
       "color": "Gris",
-      "precio": "1250000$",
+      "precio": 1250000,
       "detalle": "Nuevo sin detalles, incluye cargador y mochila.\nEspecificaciones técnicas:\n- Pantalla: 13.3 pulgadas Full HD\n- Procesador: Intel Core i5\n- RAM: 8 GB\n- Almacenamiento: 256 GB SSD"
     },
     {
@@ -108,7 +108,7 @@ const Productos = {
       "modelo": "LenovoThinkPad",
       "imagen": LenovoThinkPad,
       "color": "Negro",
-      "precio": "1100000$",
+      "precio": 1100000,
       "detalle": "Nuevo sin detalles, incluye cargador y maletín.\nEspecificaciones técnicas:\n- Pantalla: 14 pulgadas Full HD\n- Procesador: Intel Core i5\n- RAM: 8 GB\n- Almacenamiento: 256 GB SSD"
     },
     {
@@ -116,7 +116,7 @@ const Productos = {
       "modelo": "AcerSwift3",
       "imagen": AcerSwift3,
       "color": "Plata",
-      "precio": "900000$",
+      "precio": 900000,
       "detalle": "Nuevo sin detalles, incluye cargador y mochila.\nEspecificaciones técnicas:\n- Pantalla: 13.3 pulgadas Full HD\n- Procesador: AMD Ryzen 5\n- RAM: 8 GB\n- Almacenamiento: 512 GB SSD"
     }
   ],
@@ -126,7 +126,7 @@ const Productos = {
       "modelo": "IpadPro",
       "imagen": IpadPro,
       "color": "Plata",
-      "precio": "800000$",
+      "precio": 800000,
       "detalle": "Nuevo sin detalles, incluye cargador y lápiz.\nEspecificaciones técnicas:\n- Pantalla: 12.9 pulgadas Liquid Retina\n- Procesador: Apple A14 Bionic\n- RAM: 8 GB\n- Almacenamiento: 128 GB"
     },
     {
@@ -134,7 +134,7 @@ const Productos = {
       "modelo": "SamsungGalaxyTabS8",
       "imagen": SamsungGalaxyTabS8,
       "color": "Negro",
-      "precio": "950000$",
+      "precio": 950000,
       "detalle": "Nuevo sin detalles, incluye cargador y S-Pen.\nEspecificaciones técnicas:\n- Pantalla: 11 pulgadas Super AMOLED\n- Procesador: Snapdragon 870\n- RAM: 6 GB\n- Almacenamiento: 128 GB"
     },
     {
@@ -142,7 +142,7 @@ const Productos = {
       "modelo": "LenovoTabP12Pro",
       "imagen": LenovoTabP12Pro,
       "color": "Plata",
-      "precio": "750000$",
+      "precio": 750000,
       "detalle": "Nuevo sin detalles, incluye cargador y estuche.\nEspecificaciones técnicas:\n- Pantalla: 12.6 pulgadas AMOLED\n- Procesador: Snapdragon 870\n- RAM: 8 GB\n- Almacenamiento: 256 GB"
     },
     {
@@ -150,7 +150,7 @@ const Productos = {
       "modelo": "AmazonFireHD10",
       "imagen": AmazonFireHD10,
       "color": "Negro",
-      "precio": "450000$",
+      "precio": 450000,
       "detalle": "Nuevo sin detalles, incluye cargador y funda.\nEspecificaciones técnicas:\n- Pantalla: 10.1 pulgadas Full HD\n- Procesador: MediaTek MT8183\n- RAM: 2 GB\n- Almacenamiento: 32 GB"
     },
     {
@@ -158,7 +158,7 @@ const Productos = {
       "modelo": "SonyXperiaZ4Tablet",
       "imagen": SonyXperiaZ4Tablet,
       "color": "Blanco",
-      "precio": "850000$",
+      "precio": 850000,
       "detalle": "Nuevo sin detalles, incluye cargador y stylus.\nEspecificaciones técnicas:\n- Pantalla: 10.1 pulgadas 2K\n- Procesador: Qualcomm Snapdragon 810\n- RAM: 3 GB\n- Almacenamiento: 32 GB"
     },
     {
@@ -166,7 +166,7 @@ const Productos = {
       "modelo": "GooglePixelSlate",
       "imagen": GooglePixelSlate,
       "color": "Negro",
-      "precio": "900000$",
+      "precio": 900000,
       "detalle": "Nuevo sin detalles, incluye cargador y teclado.\nEspecificaciones técnicas:\n- Pantalla: 12.3 pulgadas Molecular Display\n- Procesador: Intel Core i5\n- RAM: 8 GB\n- Almacenamiento: 128 GB"
     }
   ],

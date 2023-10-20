@@ -14,7 +14,7 @@ const NavBar = ({ children }) => {
       </Link>
       <ul>
         <li className="boton">
-        <Link className="link" to="/smartphones">Celulares</Link>
+        <Link className="link" to="/celulares">Celulares</Link>
           </li>
         <li className="boton"> 
         <Link className="link" to="/tablets">Tablets</Link>

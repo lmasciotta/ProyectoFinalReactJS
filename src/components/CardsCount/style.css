@@ -34,3 +34,13 @@
     padding: 1rem;
     color: black;
 }
+
+.ButtonContainer {
+    display: flex;
+    flex-direction: column; 
+    margin-top: 10px;
+  }
+  
+  .cancel-button {
+    margin-top: 5px; 
+  }

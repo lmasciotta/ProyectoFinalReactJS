@@ -1,0 +1,62 @@
+.container {
+    width: 35%;
+    min-height: 400px;
+    margin: 0 auto;
+    border: 1px solid coral;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: rgb(212, 208, 208);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container h1 {
+    font-size: 24px;
+    color: black;
+}
+
+.container div {
+    margin: 1rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.container div h2 {
+    font-size: 20px;
+}
+
+.container div p {
+    font-size: 16px;
+    margin: 0.5rem 0;
+}
+
+.container h2 {
+    font-size: 24px;
+}
+
+.container button {
+    width: 20%;
+    background-color: coral;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.container button:hover {
+    background-color: #ff6347;
+}
+
+.btn {
+    position: relative;
+    width: 25%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    padding: 8px;
+}
